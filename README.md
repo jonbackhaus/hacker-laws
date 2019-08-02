@@ -2,52 +2,52 @@
 
 Laws, Theories, Principles and Patterns that developers will find useful.
 
-- 🇨🇳 [中文 / Chinese Version](https://github.com/nusr/hacker-laws-zh) - thanks [Steve Xu](https://github.com/nusr)!
-- 🇮🇹 [Traduzione in Italiano](https://github.com/csparpa/hacker-laws-it) - grazie [Claudio Sparpaglione](https://github.com/csparpa)!
-- 🇰🇷 [한국어 / Korean Version](https://github.com/codeanddonuts/hacker-laws-kr) - thanks [Doughnut](https://github.com/codeanddonuts)!
-- 🇷🇺 [Русская версия / Russian Version](https://github.com/solarrust/hacker-laws) - thanks [Alena Batitskaya](https://github.com/solarrust)!
-- 🇹🇷 [Türkçe / Turkish Version](https://github.com/umutphp/hacker-laws-tr) - thanks [Umut Işık](https://github.com/umutphp)
+-   🇨🇳 [中文 / Chinese Version](https://github.com/nusr/hacker-laws-zh) - thanks [Steve Xu](https://github.com/nusr)!
+-   🇮🇹 [Traduzione in Italiano](https://github.com/csparpa/hacker-laws-it) - grazie [Claudio Sparpaglione](https://github.com/csparpa)!
+-   🇰🇷 [한국어 / Korean Version](https://github.com/codeanddonuts/hacker-laws-kr) - thanks [Doughnut](https://github.com/codeanddonuts)!
+-   🇷🇺 [Русская версия / Russian Version](https://github.com/solarrust/hacker-laws) - thanks [Alena Batitskaya](https://github.com/solarrust)!
+-   🇹🇷 [Türkçe / Turkish Version](https://github.com/umutphp/hacker-laws-tr) - thanks [Umut Işık](https://github.com/umutphp)
 
 ---
 
 <!-- vim-markdown-toc GFM -->
 
-* [Introduction](#introduction)
-* [Laws](#laws)
-    * [Amdahl's Law](#amdahls-law)
-    * [Brooks' Law](#brooks-law)
-    * [Conway's Law](#conways-law)
-    * [Dunbar's Number](#dunbars-number)
-    * [Gall's Law](#galls-law)
-    * [Hanlon's Razor](#hanlons-razor)
-    * [Hofstadter's Law](#hofstadters-law)
-    * [Hutber's Law](#hutbers-law)
-    * [The Hype Cycle & Amara's Law](#the-hype-cycle--amaras-law)
-    * [Hyrum's Law (The Law of Implicit Interfaces)](#hyrums-law-the-law-of-implicit-interfaces)
-    * [Moore's Law](#moores-law)
-    * [Murphy's Law / Sod's Law](#murphys-law--sods-law)
-    * [Parkinson's Law](#parkinsons-law)
-    * [Premature Optimization Effect](#premature-optimization-effect)
-    * [Putt's Law](#putts-law)
-    * [The Law of Conservation of Complexity (Tesler's Law)](#the-law-of-conservation-of-complexity-teslers-law)
-    * [The Law of Leaky Abstractions](#the-law-of-leaky-abstractions)
-    * [The Law of Triviality](#the-law-of-triviality)
-    * [The Unix Philosophy](#the-unix-philosophy)
-    * [The Spotify Model](#the-spotify-model)
-    * [Wadler's Law](#wadlers-law)
-* [Principles](#principles)
-    * [The Pareto Principle (The 80/20 Rule)](#the-pareto-principle-the-8020-rule)
-    * [The Robustness Principle (Postel's Law)](#the-robustness-principle-postels-law)
-    * [SOLID](#solid)
-    * [The Single Responsibility Principle](#the-single-responsibility-principle)
-    * [The Open/Closed Principle](#the-openclosed-principle)
-    * [The Liskov Substitution Principle](#the-liskov-substitution-principle)
-    * [The Interface Segregation Principle](#the-interface-segregation-principle)
-    * [The Dependency Inversion Principle](#the-dependency-inversion-principle)
-    * [The DRY Principle](#the-dry-principle)
-    * [YAGNI](#yagni)
-* [Reading List](#reading-list)
-* [TODO](#todo)
+-   [Introduction](#introduction)
+-   [Laws](#laws)
+    -   [Amdahl's Law](#amdahls-law)
+    -   [Brooks' Law](#brooks-law)
+    -   [Conway's Law](#conways-law)
+    -   [Dunbar's Number](#dunbars-number)
+    -   [Gall's Law](#galls-law)
+    -   [Hanlon's Razor](#hanlons-razor)
+    -   [Hofstadter's Law](#hofstadters-law)
+    -   [Hutber's Law](#hutbers-law)
+    -   [The Hype Cycle & Amara's Law](#the-hype-cycle--amaras-law)
+    -   [Hyrum's Law (The Law of Implicit Interfaces)](#hyrums-law-the-law-of-implicit-interfaces)
+    -   [Moore's Law](#moores-law)
+    -   [Murphy's Law / Sod's Law](#murphys-law--sods-law)
+    -   [Parkinson's Law](#parkinsons-law)
+    -   [Premature Optimization Effect](#premature-optimization-effect)
+    -   [Putt's Law](#putts-law)
+    -   [The Law of Conservation of Complexity (Tesler's Law)](#the-law-of-conservation-of-complexity-teslers-law)
+    -   [The Law of Leaky Abstractions](#the-law-of-leaky-abstractions)
+    -   [The Law of Triviality](#the-law-of-triviality)
+    -   [The Unix Philosophy](#the-unix-philosophy)
+    -   [The Spotify Model](#the-spotify-model)
+    -   [Wadler's Law](#wadlers-law)
+-   [Principles](#principles)
+    -   [The Pareto Principle (The 80/20 Rule)](#the-pareto-principle-the-8020-rule)
+    -   [The Robustness Principle (Postel's Law)](#the-robustness-principle-postels-law)
+    -   [SOLID](#solid)
+    -   [The Single Responsibility Principle](#the-single-responsibility-principle)
+    -   [The Open/Closed Principle](#the-openclosed-principle)
+    -   [The Liskov Substitution Principle](#the-liskov-substitution-principle)
+    -   [The Interface Segregation Principle](#the-interface-segregation-principle)
+    -   [The Dependency Inversion Principle](#the-dependency-inversion-principle)
+    -   [The DRY Principle](#the-dry-principle)
+    -   [YAGNI](#yagni)
+-   [Reading List](#reading-list)
+-   [TODO](#todo)
 
 <!-- vim-markdown-toc -->
 
@@ -73,7 +73,7 @@ The diagram below shows some examples of potential improvements in speed:
 
 ![Diagram: Amdahl's Law](./images/amdahls_law.png)
 
-*(Image Reference: By Daniels220 at English Wikipedia, Creative Commons Attribution-Share Alike 3.0 Unported, https://en.wikipedia.org/wiki/File:AmdahlsLaw.svg)*
+_(Image Reference: By Daniels220 at English Wikipedia, Creative Commons Attribution-Share Alike 3.0 Unported, <https://en.wikipedia.org/wiki/File:AmdahlsLaw.svg>)_
 
 As can be seen, even a program which is 50% parallelisable will benefit very little beyond 10 processing units, whereas a program which is 95% parallelisable can still achieve significant speed improvements with over a thousand processing units.
 
@@ -81,8 +81,8 @@ As [Moore's Law](#moores-law) slows, and the acceleration of individual processo
 
 See also:
 
-- [Brooks' Law](#brooks-law)
-- [Moore's Law](#moores-law)
+-   [Brooks' Law](#brooks-law)
+-   [Moore's Law](#moores-law)
 
 ### Brooks' Law
 
@@ -98,8 +98,8 @@ This is a central theme of the book '[The Mythical Man Month](#reading-list)'.
 
 See also:
 
-- [Death March](#todo)
-- [Reading List: The Mythical Man Month](#reading-list)
+-   [Death March](#todo)
+-   [Reading List: The Mythical Man Month](#reading-list)
 
 ### Conway's Law
 
@@ -109,27 +109,27 @@ This law suggests that the technical boundaries of a system will reflect the str
 
 See also:
 
-- [The Spotify Model](#the-spotify-model)
+-   [The Spotify Model](#the-spotify-model)
 
 ### Dunbar's Number
 
 [Dunbar's Number on Wikipedia](https://en.wikipedia.org/wiki/Dunbar%27s_number)
 
-"Dunbar's number is a suggested cognitive limit to the number of people with whom one can maintain stable social relationships— relationships in which an individual knows who each person is and how each person relates to every other person." There is some disagreement to the exact number. "... [Dunbar] proposed that humans can comfortably maintain only 150 stable relationships." He put the number into a more social context, "the number of people you would not feel embarrassed about joining uninvited for a drink if you happened to bump into them in a bar." Estimates for the number generally lay between 100 and 250.
+"Dunbar's number is a suggested cognitive limit to the number of people with whom one can maintain stable social relationships— relationships in which an individual knows who each person is and how each person relates to every other person." There is some disagreement to the exact number. "... [Dunbar](#dunbars-number) proposed that humans can comfortably maintain only 150 stable relationships." He put the number into a more social context, "the number of people you would not feel embarrassed about joining uninvited for a drink if you happened to bump into them in a bar." Estimates for the number generally lay between 100 and 250.
 
 Like stable relationships between individuals, a developer's relationship with a codebase takes effort to maintain. When faced with large complicated projects, or ownership of many projects we lean on convention, policy, and modeled procedure to scale. Dunbar's number is not only important to keep in mind as an office grows, but also when setting the scope for team efforts or deciding when a system should invest in tooling to assist in modeling and automating logistical overhead. Putting the number into an engineering context, it is the number of projects (or normalized complexity of a single project) for which you would feel confident in joining an on-call rotation to support.
 
 See also:
 
-- [Conway's Law](#conways-law)
+-   [Conway's Law](#conways-law)
 
 ### Gall's Law
 
-[Gall's Law on Wikipedia](https://en.wikipedia.org/wiki/John_Gall_(author)#Gall's_law)
+[Gall's Law on Wikipedia](<https://en.wikipedia.org/wiki/John_Gall_(author)#Gall's_law>)
 
 > A complex system that works is invariably found to have evolved from a simple system that worked. A complex system designed from scratch never works and cannot be patched up to make it work. You have to start over with a working simple system.
 >
-> ([John Gall](https://en.wikipedia.org/wiki/John_Gall_(author)))
+> ([John Gall](<https://en.wikipedia.org/wiki/John_Gall_(author)>))
 
 Gall's Law implies that attempts to _design_ highly complex systems are likely to fail. Highly complex systems are rarely built in one go, but evolve instead from more simple systems.
 
@@ -137,7 +137,7 @@ The classic example is the world-wide-web. In it's current state, it is a highly
 
 See also:
 
-- [KISS (Keep It Simple, Stupid)](#TODO)
+-   [KISS (Keep It Simple, Stupid)](#TODO)
 
 ### Hanlon's Razor
 
@@ -163,7 +163,7 @@ This is from the book '[Gödel, Escher, Bach: An Eternal Golden Braid](#reading-
 
 See also:
 
-- [Reading List: Gödel, Escher, Bach: An Eternal Golden Braid](#reading-list)
+-   [Reading List: Gödel, Escher, Bach: An Eternal Golden Braid](#reading-list)
 
 ### Hutber's Law
 
@@ -189,7 +189,7 @@ The Hype Cycle is a visual representation of the excitement and development of t
 
 ![The Hype Cycle](./images/gartner_hype_cycle.png)
 
-*(Image Reference: By Jeremykemp at English Wikipedia, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=10547051)*
+_(Image Reference: By Jeremykemp at English Wikipedia, CC BY-SA 3.0, <https://commons.wikimedia.org/w/index.php?curid=10547051>)_
 
 In short, this cycle suggests that there is typically a burst of excitement around new technology and its potential impact. Teams often jump into these technologies quickly, and sometimes find themselves disappointed with the results. This might be because the technology is not yet mature enough, or real-world applications are not yet fully realised. After a certain amount of time, the capabilities of the technology increase and practical opportunities to use it increase, and teams can finally become productive. Roy Amara's quote sums this up most succinctly - "We tend to overestimate the effect of a technology in the short run and underestimate in the long run".
 
@@ -204,12 +204,12 @@ In short, this cycle suggests that there is typically a burst of excitement arou
 >
 > (Hyrum Wright)
 
-Hyrum's Law states that when you have a _large enough number of consumers_ of an API, all behaviours of the API (even those not defined as part of a public contract) will eventually come to be depended on by someone. A trivial example may be non-functional elements such as the response time of an API. A more subtle example might be consumers who are relying on applying a regex to an error message to determine the *type* of error of an API. Even if the public contract of the API states nothing about the contents of the message, indicating users should use an associated error code, _some_ users may use the message, and changing the message essentially breaks the API for those users.
+Hyrum's Law states that when you have a _large enough number of consumers_ of an API, all behaviours of the API (even those not defined as part of a public contract) will eventually come to be depended on by someone. A trivial example may be non-functional elements such as the response time of an API. A more subtle example might be consumers who are relying on applying a regex to an error message to determine the _type_ of error of an API. Even if the public contract of the API states nothing about the contents of the message, indicating users should use an associated error code, _some_ users may use the message, and changing the message essentially breaks the API for those users.
 
 See also:
 
-- [The Law of Leaky Abstractions](#the-law-of-leaky-abstractions)
-- [XKCD 1172](https://xkcd.com/1172/)
+-   [The Law of Leaky Abstractions](#the-law-of-leaky-abstractions)
+-   [XKCD 1172](https://xkcd.com/1172/)
 
 ### Moore's Law
 
@@ -235,8 +235,8 @@ These 'laws' are generally used in a comic sense. However, phenomena such as [_C
 
 See Also:
 
-- [Confirmation Bias](#TODO)
-- [Selection Bias](#TODO)
+-   [Confirmation Bias](#TODO)
+-   [Selection Bias](#TODO)
 
 ### Parkinson's Law
 
@@ -246,11 +246,11 @@ See Also:
 
 In its original context, this Law was based on studies of bureaucracies. It may be pessimistically applied to software development initiatives, the theory being that teams will be inefficient until deadlines near, then rush to complete work by the deadline, thus making the actual deadline somewhat arbitrary.
 
-If this law were combined with [Hofstadter's Law](#hofstadters-law), an even more pessimistic viewpoint is reached - work will expand to fill the time available for its completion and *still take longer than expected*.
+If this law were combined with [Hofstadter's Law](#hofstadters-law), an even more pessimistic viewpoint is reached - work will expand to fill the time available for its completion and _still take longer than expected_.
 
 See also:
 
-- [Hofstadter's Law](#hofstadters-law)
+-   [Hofstadter's Law](#hofstadters-law)
 
 ### Premature Optimization Effect
 
@@ -280,9 +280,8 @@ However, it should be stressed that Laws such as this are vast generalisations a
 
 See also:
 
-- [The Peter Principle](#TODO)
-- [Dilbert's Law](#TODO).
-
+-   [The Peter Principle](#TODO)
+-   [Dilbert's Law](#TODO).
 
 ### The Law of Conservation of Complexity (Tesler's Law)
 
@@ -304,7 +303,7 @@ One interesting element to this law is the suggestion that even by simplifying t
 
 This law states that abstractions, which are generally used in computing to simplify working with complicated systems, will in certain situations 'leak' elements of the underlying system, this making the abstraction behave in an unexpected way.
 
-An example might be loading a file and reading its contents. The file system APIs are an _abstraction_ of the lower level kernel systems, which are themselves an abstraction over the physical processes relating to changing data on a magnetic platter (or flash memory for an SSD). In most cases, the abstraction of treating a file like a stream of binary data will work. However, for a magnetic drive, reading data sequentially will be *significantly* faster than random access (due to increased overhead of page faults), but for an SSD drive, this overhead will not be present. Underlying details will need to be understood to deal with this case (for example, database index files are structured to reduce the overhead of random access), the abstraction 'leaks' implementation details the developer may need to be aware of.
+An example might be loading a file and reading its contents. The file system APIs are an _abstraction_ of the lower level kernel systems, which are themselves an abstraction over the physical processes relating to changing data on a magnetic platter (or flash memory for an SSD). In most cases, the abstraction of treating a file like a stream of binary data will work. However, for a magnetic drive, reading data sequentially will be _significantly_ faster than random access (due to increased overhead of page faults), but for an SSD drive, this overhead will not be present. Underlying details will need to be understood to deal with this case (for example, database index files are structured to reduce the overhead of random access), the abstraction 'leaks' implementation details the developer may need to be aware of.
 
 The example above can become more complex when _more_ abstractions are introduced. The Linux operating system allows files to be accessed over a network but represented locally as 'normal' files. This abstraction will 'leak' if there are network failures. If a developer treats these files as 'normal' files, without considering the fact that they may be subject to network latency and failures, the solutions will be buggy.
 
@@ -312,11 +311,11 @@ The article describing the law suggests that an over-reliance on abstractions, c
 
 See also:
 
-- [Hyrum's Law](#hyrums-law-the-law-of-implicit-interfaces)
+-   [Hyrum's Law](#hyrums-law-the-law-of-implicit-interfaces)
 
 Real-world examples:
 
-- [Photoshop Slow Startup](https://forums.adobe.com/thread/376152) - an issue I encountered in the past. Photoshop would be slow to startup, sometimes taking minutes. It seems the issue was that on startup it reads some information about the current default printer. However, if that printer is actually a network printer, this could take an extremely long time. The _abstraction_ of a network printer being presented to the system similar to a local printer caused an issue for users in poor connectivity situations.
+-   [Photoshop Slow Startup](https://forums.adobe.com/thread/376152) - an issue I encountered in the past. Photoshop would be slow to startup, sometimes taking minutes. It seems the issue was that on startup it reads some information about the current default printer. However, if that printer is actually a network printer, this could take an extremely long time. The _abstraction_ of a network printer being presented to the system similar to a local printer caused an issue for users in poor connectivity situations.
 
 ### The Law of Triviality
 
@@ -349,21 +348,19 @@ The Spotify Model also popularises the concepts of Tribes, Guilds, Chapters, whi
 [Wadler's Law on wiki.haskell.org](https://wiki.haskell.org/Wadler's_Law)
 
 > In any language design, the total time spent discussing a feature in this list is proportional to two raised to the power of its position.
-> 
-> 0. Semantics
-> 1. Syntax
-> 2. Lexical syntax
-> 3. Lexical syntax of comments
-> 
+>
+> 0.  Semantics
+> 1.  Syntax
+> 1.  Lexical syntax
+> 1.  Lexical syntax of comments
+>
 > (In short, for every hour spent on semantics, 8 hours will be spent on the syntax of comments).
 
 Similar to [The Law of Triviality](#the-law-of-triviality), Wadler's Law states what when designing a language, the amount of time spent on language structures is disproportionately high in comparison to the importance of those features.
 
 See also:
 
-- [The Law of Triviality](#the-law-of-triviality)
-
-
+-   [The Law of Triviality](#the-law-of-triviality)
 
 ## Principles
 
@@ -377,11 +374,11 @@ Principles are generally more likely to be guidelines relating to design.
 
 The Pareto Principle suggests that in some cases, the majority of results come from a minority of inputs:
 
-- 80% of a certain piece of software can be written in 20% of the total allocated time (conversely, the hardest 20% of the code takes 80% of the time)
-- 20% of the effort produces 80% of the result
-- 20% of the work creates 80% of the revenue
-- 20% of the bugs cause 80% of the crashes
-- 20% of the features cause 80% of the usage
+-   80% of a certain piece of software can be written in 20% of the total allocated time (conversely, the hardest 20% of the code takes 80% of the time)
+-   20% of the effort produces 80% of the result
+-   20% of the work creates 80% of the revenue
+-   20% of the bugs cause 80% of the crashes
+-   20% of the features cause 80% of the usage
 
 In the 1940s American-Romanian engineer Dr. Joseph Juran, who is widely credited with being the father of quality control, [began to apply the Pareto principle to quality issues](https://en.wikipedia.org/wiki/Joseph_M._Juran).
 
@@ -389,7 +386,7 @@ This principle is also known as: The 80/20 Rule, The Law of the Vital Few and Th
 
 Real-world examples:
 
-- In 2002 Microsoft reported that by fixing the top 20% of the most-reported bugs, 80% of the related errors and crashes in windows and office would become eliminated ([Reference](https://www.crn.com/news/security/18821726/microsofts-ceo-80-20-rule-applies-to-bugs-not-just-features.htm)).
+-   In 2002 Microsoft reported that by fixing the top 20% of the most-reported bugs, 80% of the related errors and crashes in windows and office would become eliminated ([Reference](https://www.crn.com/news/security/18821726/microsofts-ceo-80-20-rule-applies-to-bugs-not-just-features.htm)).
 
 ### The Robustness Principle (Postel's Law)
 
@@ -405,11 +402,11 @@ The goal of this principle is to build systems which are robust, as they can han
 
 This is an acronym, which refers to:
 
-* S: [The Single Responsibility Principle](#the-single-responsibility-principle)
-* O: [The Open/Closed Principle](#the-openclosed-principle)
-* L: [The Liskov Substitution Principle](#the-liskov-substitution-principle)
-* I: [The Interface Segregation Principle](#the-interface-segregation-principle)
-* D: [The Dependency Inversion Principle](#the-dependency-inversion-principle)
+-   S: [The Single Responsibility Principle](#the-single-responsibility-principle)
+-   O: [The Open/Closed Principle](#the-openclosed-principle)
+-   L: [The Liskov Substitution Principle](#the-liskov-substitution-principle)
+-   I: [The Interface Segregation Principle](#the-interface-segregation-principle)
+-   D: [The Dependency Inversion Principle](#the-dependency-inversion-principle)
 
 These are key principles in [Object-Oriented Programming](#todo). Design principles such as these should be able to aid developers build more maintainable systems.
 
@@ -425,8 +422,8 @@ Theoretically, this should make the code more robust, and easier to change. Know
 
 See also:
 
-- [Object-Oriented Programming](#todo)
-- [SOLID](#solid)
+-   [Object-Oriented Programming](#todo)
+-   [SOLID](#solid)
 
 ### The Open/Closed Principle
 
@@ -442,8 +439,8 @@ This principle has particular relevance for object-oriented programming, where w
 
 See also:
 
-- [Object-Oriented Programming](#todo)
-- [SOLID](#solid)
+-   [Object-Oriented Programming](#todo)
+-   [SOLID](#solid)
 
 ### The Liskov Substitution Principle
 
@@ -459,8 +456,8 @@ This principle has particular relevance for object-oriented programming, where t
 
 See also:
 
-- [Object-Oriented Programming](#todo)
-- [SOLID](#solid)
+-   [Object-Oriented Programming](#todo)
+-   [SOLID](#solid)
 
 ### The Interface Segregation Principle
 
@@ -476,10 +473,10 @@ This principle has particular relevance for object-oriented programming, where i
 
 See also:
 
-- [Object-Oriented Programming](#todo)
-- [SOLID](#solid)
-- [Duck Typing](#todo)
-- [Decoupling](#todo)
+-   [Object-Oriented Programming](#todo)
+-   [SOLID](#solid)
+-   [Duck Typing](#todo)
+-   [Decoupling](#todo)
 
 ### The Dependency Inversion Principle
 
@@ -495,10 +492,10 @@ This principle is complex, as it can seem to 'invert' the expected dependencies 
 
 See also:
 
-- [Object-Oriented Programming](#todo)
-- [SOLID](#solid)
-- [Inversion of Control](#todo)
-- [Dependency Injection](#todo)
+-   [Object-Oriented Programming](#todo)
+-   [SOLID](#solid)
+-   [Inversion of Control](#todo)
+-   [Dependency Injection](#todo)
 
 ### The DRY Principle
 
@@ -514,7 +511,7 @@ In practice, if you have the same piece of information in two (or more) differen
 
 See also:
 
-- [The Pragmatic Developer](https://en.wikipedia.org/wiki/The_Pragmatic_Programmer)
+-   [The Pragmatic Developer](https://en.wikipedia.org/wiki/The_Pragmatic_Programmer)
 
 ### YAGNI
 
@@ -532,19 +529,18 @@ Adhering to this principle should reduce the amount of unused code in the codeba
 
 See also:
 
-- [Reading List: Extreme Programming Installed](#reading-list)
-
+-   [Reading List: Extreme Programming Installed](#reading-list)
 
 ## Reading List
 
 If you have found these concepts interesting, you may enjoy the following books.
 
-- [Extreme Programming Installed - Ron Jeffries, Ann Anderson, Chet Hendrikson](https://www.goodreads.com/en/book/show/67834) - Covers the core principles of Extreme Programming.
-- [The Mythical Man Month - Frederick P. Brooks Jr.](https://www.goodreads.com/book/show/13629.The_Mythical_Man_Month) - A classic volume on software engineering. [Brooks' Law](#brooks-law) is a central theme of the book.
-- [Gödel, Escher, Bach: An Eternal Golden Braid - Douglas R. Hofstadter.](https://www.goodreads.com/book/show/24113.G_del_Escher_Bach) - This book is difficult to classify. [Hofstadter's Law](#hofstadters-law) is from the book.
+-   [Extreme Programming Installed - Ron Jeffries, Ann Anderson, Chet Hendrikson](https://www.goodreads.com/en/book/show/67834) - Covers the core principles of Extreme Programming.
+-   [The Mythical Man Month - Frederick P. Brooks Jr.](https://www.goodreads.com/book/show/13629.The_Mythical_Man_Month) - A classic volume on software engineering. [Brooks' Law](#brooks-law) is a central theme of the book.
+-   [Gödel, Escher, Bach: An Eternal Golden Braid - Douglas R. Hofstadter.](https://www.goodreads.com/book/show/24113.G_del_Escher_Bach) - This book is difficult to classify. [Hofstadter's Law](#hofstadters-law) is from the book.
 
 ## TODO
 
 Hi! If you land here, you've clicked on a link to a topic I've not written up yet, sorry about this - this is work in progress!
 
-Feel free to [Raise an Issue](https://github.com/dwmkerr/hacker-laws/issues) requesting more details, or [Open a Pull Request](https://github.com/dwmkerr/hacker-laws/pulls) to submit your proposed definition of the topic. 
+Feel free to [Raise an Issue](https://github.com/dwmkerr/hacker-laws/issues) requesting more details, or [Open a Pull Request](https://github.com/dwmkerr/hacker-laws/pulls) to submit your proposed definition of the topic.
