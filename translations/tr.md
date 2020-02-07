@@ -8,8 +8,9 @@ Programcıların faydalı bulacağı yasalar, teoriler, prensipler ve desenler.
 - 🇷🇺 [Русская версия / Rusça İçin](https://github.com/solarrust/hacker-laws) - Teşekkürler [Alena Batitskaya](https://github.com/solarrust)!
 - 🇹🇷 [Türkçe / Turkçe İçin](https://github.com/umutphp/hacker-laws-tr) - Teşekkürler [Umut Işık](https://github.com/umutphp)
 - 🇧🇷 [Brasileiro / Brezilyaca İçin](./translations/pt-BR.md) - Teşekkürler [Leonardo Costa](https://github.com/LeoFC97)
+- 🇪🇸 [Castellano / İspanyolca İçin](./translations/es-ES.md) - Teşekkürler [Manuel Rubio](https://github.com/manuel-rubio)
 
-Bu projeyi beğendiniz mi? Lütfen [sponsorluk olmayı](https://github.com/sponsors/dwmkerr) düşünün!
+Bu projeyi beğendiniz mi? Lütfen [sponsor olmayı](https://github.com/sponsors/dwmkerr) düşünün!
 
 ---
 
@@ -18,11 +19,13 @@ Bu projeyi beğendiniz mi? Lütfen [sponsorluk olmayı](https://github.com/spons
 - [Giriş](#introduction)
 - [Yasalar](#laws)
     - [Amdahl Yasası](#amdahls-law)
+    - [Kırık Camlar Teorisi](#k%C4%B1r%C4%B1k-camlar-teorisi)
     - [Brooks Yasası](#brooks-law)
     - [Conway Yasası](#conways-law)
     - [Cunningham Yasası](#cunninghams-law)
     - [Dunbar Sayısı](#dunbars-number)
     - [Gall Yasası](#galls-law)
+    - [Goodhart Yasası](#goodharts-law)
     - [Hanlon'un Usturası](#hanlons-razor)
     - [Hofstadter Yasası](#hofstadters-law)
     - [Hutber Yasası](#hutbers-law)
@@ -41,7 +44,7 @@ Bu projeyi beğendiniz mi? Lütfen [sponsorluk olmayı](https://github.com/spons
     - [Unix Felsefesi](#the-unix-philosophy)
     - [Spotify Modeli](#the-spotify-model)
     - [Wadler Yasası](#wadlers-law)
-    - [Wheaton Yasası](#wheatons-kanunu)
+    - [Wheaton Yasası](#wheatons-law)
 - [Prensipler](#principles)
     - [Dilbert Prensibi](#the-dilbert-principle)
     - [Pareto Prensibi (80/20 Kuralı)](#the-pareto-principle-the-8020-rule)
@@ -56,8 +59,9 @@ Bu projeyi beğendiniz mi? Lütfen [sponsorluk olmayı](https://github.com/spons
     - [DRY Prensibi](#the-dry-principle)
     - [KISS prensibi](#the-kiss-principle)
     - [YAGNI](#yagni)
-    - [Dağıtık Sistemlerin Yanılgıları](#da%C4%9F%C4%B1t%C4%B1k-hesaplaman%C4%B1n-yanl%C4%B1%C5%9Flar%C4%B1)
+    - [Dağıtık Sistemlerin Yanılgıları](#the-fallacies-of-distributed-computing)
 - [Ek Kaynaklar](#reading-list)
+- [Katkıda Bulunmak İçin](#katk%C4%B1)
 - [TODO](#todo)
 
 <!-- vim-markdown-toc -->
@@ -82,7 +86,7 @@ En güzel şu örnekle anlatılabilir. Bir programın iki bölümden oluştuğun
 
 Aşağıdaki diyagram bazı olası hız geliştirmelerine örnekler içeriyor:
 
-![Diagram: Amdahl's Law](../images/amdahls_law.png)
+<img width="480px" alt="Diagram: Amdahl's Law" src="../images/amdahls_law.png">
 
 *(Diyagramın kaynağı: Daniels220 tarafından İngilizce Wikipedia'da, Creative Commons Attribution-Share Alike 3.0 Unported, https://en.wikipedia.org/wiki/File:AmdahlsLaw.svg)*
 
@@ -94,6 +98,24 @@ Ek kaynaklar:
 
 - [Brooks Yasası](#brooks-law)
 - [Moore Yasası ](#moores-law)
+
+### Kırık Camlar Teorisi
+
+[Wikipedia'da Kırık Camlar Teorisi](https://en.wikipedia.org/wiki/Broken_windows_theory)
+
+Kırık Camlar Teorisi, gözle görülebilir suç belirtilerinin (ya da ortamın  bakımsızlığının) daha ciddi suçlara (ya da ortamın daha da bozulmasına) yol açtığını göstermektedir.
+
+Bu teori, yazılım geliştirmeye şu şekilde uygulanabilir; düşük kalite kodun (veya [Teknik Borcun](#TODO)) varlığı kaliteyi geliştirme çabalarının göz ardı edilebileceği veya önemsenmeyeceği algısına yol açabileceği ve dolayısıyla düşük kalite koda sebep olabileceğidir. Bu etki zamanla kalitenin daha çok azalmasına neden olur.
+
+Ek kaynaklar:
+
+- [Teknik Borç](#yapmak)
+
+Örnekler:
+
+- [Pragmatik Programlama: Yazılım Entropisi](https://pragprog.com/the-pragmatic-programmer/extracts/software-entropy)
+- [Kodlama Kabusu: Kırık Camlar Teorisi](https://blog.codinghorror.com/the-broken-window-theory/)
+- [Açık Kaynak: Eğlenceli Programlama - Kırık Camlar Teorisi](https://opensourceforu.com/2011/05/joy-of-programming-broken-window-theory/)
 
 ### Brooks Yasası
 
@@ -152,6 +174,8 @@ Ek kaynaklar:
 
 > Çalışan karmaşık bir sistemin her zaman işe yarayan daha basit bir sistemden evrimleştiği kesinlikle söylenebilir. Başlangıçtan itibaren karmaşık tasarlanmış bir sistemin asla çalışmayacağı ve sonradan da düzeltilemeyeceği kesindir. Çalışsan daha basit bir sistem ile başlamanız gerekir.
 > ([John Gall](https://en.m.wikipedia.org/wiki/John_Gall_(author)))
+> ([John Gall](https://en.m.wikipedia.org/wiki/John_Gall_(author)))
+> ([John Gall](https://en.m.wikipedia.org/wiki/John_Gall_(author)))
 
 Gall Yasası der ki, çok karmaşık sistemleri *tasarlamaya* çalışmak her zaman başarısızlıkla sonuçlanır. Bu tür sistemlerin ilk denemede başarılı olmaları çok nadir görülür ama genellikle basit sistemlerden evrilirler.
 
@@ -160,6 +184,32 @@ En klasik örnek günümüzdeki internettir.  Şu an çok karmaşık bir sistemd
 Ek kaynaklar:
 
 - [KISS (Keep It Simple, Stupid)](#the-kiss-principle)
+
+### Goodhart Yasası
+
+[Wikipedia'da Goodhart Yasası](https://en.wikipedia.org/wiki/Goodhart's_law)
+
+> Gözlemlenen herhangi bir istatistiksel düzenlilik, kontrol amaçları için üzerine baskı uygulandığında çökme eğiliminde olacaktır.
+> *Charles Goodhart*
+> *Charles Goodhart*
+
+Ayrıca şu şekilde de ifade edilir:
+
+> Bir ölçüm hedef haline geldiğinde, iyi bir ölçüm olmaktan çıkar.
+> *Marilyn Strathern*
+> *Marilyn Strathern*
+
+Bu yasa, ölçüme dayalı optimizasyonların, ölçüm sonucunun kendisinin anlamsızlaşmasına yol açabileceğini belirtmektedir. Bir prosese kör bir şekilde uygulanan aşırı seçici tedbirler ( [KPI'ler](https://en.wikipedia.org/wiki/Performance_indicator) ) çarpık bir etkiye neden olur. İnsanlar, eylemlerinin bütünsel sonuçlarına dikkat etmek yerine belirli metrikleri tatmin etmek için sistemle "oynayarak" yerel olarak optimize etme eğilimindedir.
+
+Gerçek dünyadan örnekler:
+
+- "Asert" olmadan yazılan testler, ölçümün amacının iyi test edilmiş bir yazılım oluşturmak olmasına rağmen sadece kod kapsamı beklentisini karşılar.
+- Yazılan satır sayısının gösterdiği geliştirici performans puanı haksız yere şişirilmiş kod tabanına yol açar.
+
+Ek kaynaklar:
+
+- [Goodhart Yasası: Yanlış Şeyleri Ölçmek Ahlaksız Davranışları Nasıl Yönlendirir?](https://coffeeandjunk.com/goodharts-campbells-law/)
+- [Sorunsuz bir yazılım dünyasında Dilbert](https://dilbert.com/strip/1995-11-13)
 
 ### Hanlon'un Usturası
 
@@ -363,7 +413,7 @@ Bu yasa diyor ki, ekipler önemsiz ve kozmetik sorunlara ciddi ve önemli sorunl
 
 En çok kullanılan kurgu örnek nükleer enerji reaktörünü onaylayacak olan komitenin reaktörün genel tasarımını onaylama zamanından çok bisiklet parkının tasarımını onaylamak için zaman harcamasıdır. Çok büyük ve karmaşık konularla ilgili o alanda bir eğitime, tecrübeye ve hazırlığa sahip olmadan kayda değer yorum getirmek zordur. İnsanlar genelde değerli katkılar verdiklerinin görülmesini isterler. Dolayısıyla insanlar kolayca katkı verebilecekleri gerekli ve önemli olmasa bile küçük detaylara odaklanma eğilimi gösterirler.
 
-Bu kurgu örnek 'Bike Shedding' diye bir deyimin yaygınlaşmasına sebep olmuştur. Türkçe'deki 'pire için yorgan yakmak' ya da 'attığın taş ürküttüğün kurbağaya değsin' gibi deyimlere benzer.
+Bu kurgu örnek 'Bike Shedding' diye bir deyimin yaygınlaşmasına sebep olmuştur. Türkçe'deki 'pire için yorgan yakmak' ya da 'attığın taş ürküttüğün kurbağaya değsin' gibi deyimlere benzer. Alternatif bir terim 'Yak Shaving' de kullanılmaktadır.
 
 ### Unix Felsefesi
 
@@ -529,7 +579,6 @@ Ek kaynaklar:
 
 '[SOLID](#solid)' prensiplerinin üçüncüsüdür. Bu prensibe göre herhangi bir bileşenin üzerine dayandığı bir özelliği (sınıf vs) o özelliklikten türetilmiş alt özellikle değiştirebilmeliyiz ve bu durumda bir sistem sorununa neden olunmaz ya da alt özelliğin bütün detaylarını bilmeye gerek kalmaz.
 
-
 Örneğin dosyayı temsil eden bir yapıdan XML verisi okuyan bir metod düşünelim. Eğer bu metod 'dosya' tipini kullanıyorsa, 'dosya' tipinden türeyen bütün tipleri de kullanabilmelidir. Eğer 'dosya' tipi geriye dönük aramayı destekliyorsa ama 'dosya' tipinden türetilmiş 'ağ dosyası' tipi bunu desteklemiyorsa o zaman 'ağ dosyası' tipi bu prensibi ihlal ediyor demektir.
 
 Bu prensip nesne-tabanlı programlamanın bağlı olduğu prensiplerden biridir ve geliştiricilerin kafasını karıştırmamak için sınıf hiyerarşisinin dikkatli tarasarlanması gerektiğini söyler.
@@ -569,6 +618,7 @@ Ek kaynaklar:
 Örnek olarak bir web sitesinden metadata okuyan bir program düşünelim. Bu programın ana bileşeninin web sitesinden içeriği indiren ve metadayı okuyan bileşenlerinden ne yaptığından haberdar olması gerekir. Eğer bu prensibe uyarsak ana bileşenin byte verisi okuyan ve byte verisinden metada çıkaran soyutlamalara bağımlı olması lazım. Ana bileşenin TCP/IP, HTTP ya da HTML hakında bir detaya hakim olmasına gerek yoktur.
 
 Bu prensip olması gereken bağımlığı tersine çevirdiği düşünebileceğinden (isminden dolayı) biraz karmaşık gelebilir. Pratikte, ayrı bir düzenleme bileşeninin, soyut türlerin doğru uygulamalarının kullanılmasını sağlaması gerektiği anlamına gelir (önceki örnekte, *bir şey* hala meta veri okuyucu bileşenine bir HTTP dosyası indiricisi ve HTML meta etiketi okuyucu sağlamalıdır). Bu prensip aynı zamanda [Kontrolün Ters Çevirilmesi](#todo) ve [Bağımlık Enjeksiyonu](#todo) gibi konularla da bağlantılıdır.
+
 
 Ek kaynaklar:
 
@@ -610,7 +660,7 @@ Ek kaynaklar:
 
 ### YAGNI
 
-[Wikipedia'da YAGNI](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it)
+[Wikipedia'da YAGNI](https://en.wikipedia.org/wiki/You_ain%27t_gonna_need_it)
 
 ***Y**ou **A**ren't **G**onna **N**eed **I**t* (İhtiyacın olmayacak) deyiminin kısaltmasıdır.
 
@@ -659,8 +709,14 @@ Bu kavramları ilginç bulduysanız, aşağıdaki kitapların keyfini çıkarabi
 - [Extreme Programming Installed - Ron Jeffries, Ann Anderson, Chet Hendrikson](https://www.goodreads.com/en/book/show/67834) - Extreme Programming kavramının temel prensiplerini içerir.
 - [The Mythical Man Month - Frederick P. Brooks Jr.](https://www.goodreads.com/book/show/13629.The_Mythical_Man_Month) - Yazılım mühendisliği klasiği sayılabilir. Brooks Yasası bu kitabın ana temasıdır.
 - [Gödel, Escher, Bach: An Eternal Golden Braid - Douglas R. Hofstadter.](https://www.goodreads.com/book/show/24113.G_del_Escher_Bach) - Sınıflandırması zor bir kitap. Hofstadter Yasası bu kitaptan alıntıdır.
-- [Dilbert Prensibi - Adam Scott](https://www.goodreads.com/book/show/85574.The_Dilbert_Principle) - Amerikadaki kurumsal hayata mizahi bir yaklaşım,  [Dilbert Prensibinin](#the-dilbert-principl) sahibinden.
+- [Dilbert Prensibi - Scott Adams](https://www.goodreads.com/book/show/85574.The_Dilbert_Principle) - [Dilbert İlkesini](#the-dilbert-principle) oluşturan yazardan, kurumsal Amerika'ya komik bir bakış.
 - [The Peter Principle - Lawrence J. Peter](https://www.goodreads.com/book/show/890728.The_Peter_Principle) - Another comic look at the challenges of larger organisations and people management, the source of [The Peter Principle](#the-peter-principle).
+
+## Katkıda Bulunmak İçin
+
+Lütfen katkıda bulunun! Bir ekleme veya değişiklik önermek istiyorsanız [bir sorun oluşturun](https://github.com/dwmkerr/hacker-laws/issues/new) veya kendi değişikliklerinizi önermek için [bir PR açın](https://github.com/dwmkerr/hacker-laws/compare) .
+
+Lütfen metin, stil ve benzeri gereksinimler için [Katkıda Bulunma Kılavuzunu](./.github/contributing.md) okuduğunuzdan emin olun. Lütfen projeyle ilgili tartışmalarda [Davranış Kurallarına](./.github/CODE_OF_CONDUCT.md) dikkat edin.
 
 ## TODO
 

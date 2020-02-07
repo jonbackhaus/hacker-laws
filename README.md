@@ -8,6 +8,7 @@ Laws, Theories, Principles and Patterns that developers will find useful.
 - 🇷🇺 [Русская версия / Russian Version](https://github.com/solarrust/hacker-laws) - thanks [Alena Batitskaya](https://github.com/solarrust)!
 - 🇹🇷 [Türkçe / Turkish Version](https://github.com/umutphp/hacker-laws-tr) - thanks [Umut Işık](https://github.com/umutphp)
 - 🇧🇷 [Brasileiro / Brazilian Version](./translations/pt-BR.md) - thanks [Leonardo Costa](https://github.com/LeoFC97)
+- 🇪🇸 [Castellano / Spanish Version](./translations/es-ES.md) - thanks [Manuel Rubio](https://github.com/manuel-rubio)
 
 Like this project? Please considering [Sponsoring Me](https://github.com/sponsors/dwmkerr)!
 
@@ -18,11 +19,13 @@ Like this project? Please considering [Sponsoring Me](https://github.com/sponsor
 * [Introduction](#introduction)
 * [Laws](#laws)
     * [Amdahl's Law](#amdahls-law)
+    * [The Broken Windows Theory](#the-broken-windows-theory)
     * [Brooks' Law](#brooks-law)
     * [Conway's Law](#conways-law)
     * [Cunningham's Law](#cunninghams-law)
     * [Dunbar's Number](#dunbars-number)
     * [Gall's Law](#galls-law)
+    * [Goodhart's Law](#goodharts-law)
     * [Hanlon's Razor](#hanlons-razor)
     * [Hofstadter's Law](#hofstadters-law)
     * [Hutber's Law](#hutbers-law)
@@ -31,6 +34,7 @@ Like this project? Please considering [Sponsoring Me](https://github.com/sponsor
     * [Metcalfe's Law](#metcalfes-law)
     * [Moore's Law](#moores-law)
     * [Murphy's Law / Sod's Law](#murphys-law--sods-law)
+    * [Occam's Razor](#occams-razor)
     * [Parkinson's Law](#parkinsons-law)
     * [Premature Optimization Effect](#premature-optimization-effect)
     * [Putt's Law](#putts-law)
@@ -58,6 +62,7 @@ Like this project? Please considering [Sponsoring Me](https://github.com/sponsor
     * [YAGNI](#yagni)
     * [The Fallacies of Distributed Computing](#the-fallacies-of-distributed-computing)
 * [Reading List](#reading-list)
+* [Contributing](#contributing)
 * [TODO](#todo)
 
 <!-- vim-markdown-toc -->
@@ -82,7 +87,7 @@ Best illustrated with an example. If a program is made up of two parts, part A, 
 
 The diagram below shows some examples of potential improvements in speed:
 
-![Diagram: Amdahl's Law](./images/amdahls_law.png)
+<img width="480px" alt="Diagram: Amdahl's Law" src="./images/amdahls_law.png" />
 
 *(Image Reference: By Daniels220 at English Wikipedia, Creative Commons Attribution-Share Alike 3.0 Unported, https://en.wikipedia.org/wiki/File:AmdahlsLaw.svg)*
 
@@ -94,6 +99,24 @@ See also:
 
 - [Brooks' Law](#brooks-law)
 - [Moore's Law](#moores-law)
+
+### The Broken Windows Theory
+
+[The Broken Windows Theory on Wikipedia](https://en.wikipedia.org/wiki/Broken_windows_theory)
+
+The Broken Windows Theory suggests that visible signs of crime (or lack of care of an environment) lead to further and more serious crimes (or further deterioration of the environment).
+
+This theory has been applied to software development, suggesting that poor quality code (or [Technical Debt](#TODO)) can lead to a perception that efforts to improve quality may be ignored or undervalued, thus leading to further poor quality code. This effect cascades leading to a great decrease in quality over time.
+
+See also:
+
+- [Technical Debt](#TODO)
+
+Examples:
+
+- [The Pragmatic Programming: Software Entropy](https://pragprog.com/the-pragmatic-programmer/extracts/software-entropy)
+- [Coding Horror: The Broken Window Theory](https://blog.codinghorror.com/the-broken-window-theory/)
+- [OpenSource: Joy of Programming - The Broken Window Theory](https://opensourceforu.com/2011/05/joy-of-programming-broken-window-theory/)
 
 ### Brooks' Law
 
@@ -162,6 +185,30 @@ See also:
 
 - [KISS (Keep It Simple, Stupid)](#the-kiss-principle)
 
+### Goodhart's Law
+
+[The Goodhart's Law on Wikipedia](https://en.wikipedia.org/wiki/Goodhart's_law)
+
+> Any observed statistical regularity will tend to collapse once pressure is placed upon it for control purposes.
+>
+> _Charles Goodhart_
+
+Also commonly referenced as:
+
+> When a measure becomes a target, it ceases to be a good measure.
+>
+> _Marilyn Strathern_
+
+The law states that the measure-driven optimizations could lead to devaluation of the measurement outcome itself. Overly selective set of measures ([KPIs](https://en.wikipedia.org/wiki/Performance_indicator)) blindly applied to a process results in distorted effect. People tend to optimize locally by "gaming" the system in order to satisfy particular metrics instead of paying attention to holistic outcome of their actions.
+
+Real-world examples:
+- Assert-free tests satisfy the code coverage expectation, despite the metric intent was to create well-tested software.
+- Developer performance score indicated by the number of lines committed leads to unjustifiably bloated codebase.
+
+See also:
+- [Goodhart’s Law: How Measuring The Wrong Things Drive Immoral Behaviour](https://coffeeandjunk.com/goodharts-campbells-law/)
+- [Dilbert on bug-free software](https://dilbert.com/strip/1995-11-13)
+
 ### Hanlon's Razor
 
 [Hanlon's Razor on Wikipedia](https://en.wikipedia.org/wiki/Hanlon%27s_razor)
@@ -198,7 +245,7 @@ See also:
 
 This law suggests that improvements to a system will lead to deterioration in other parts, or it will hide other deterioration, leading overall to a degradation from the current state of the system.
 
-For example, a decrease in response latency for a particular end-point could cause increased throughput and capacity issues further along in a request flow, effecting an entirely different sub-system.
+For example, a decrease in response latency for a particular end-point could cause increased throughput and capacity issues further along in a request flow, affecting an entirely different sub-system.
 
 ### The Hype Cycle & Amara's Law
 
@@ -273,6 +320,25 @@ See Also:
 
 - [Confirmation Bias](#TODO)
 - [Selection Bias](#TODO)
+
+### Occam's Razor
+
+[Occam's Razor on Wikipedia](https://en.wikipedia.org/wiki/Occam's_razor)
+
+> Entities should not be multiplied without necessity.
+>
+> William of Ockham
+
+Occam's razor says that among several possible solutions, the most likely solution is the one with the least number of concepts and assumptions. This solution is the simplest and solves only the given problem, without introducing accidental complexity and possible negative consequences.
+
+See also:
+
+- [YAGNI](#yagni)
+- [No Silver Bullet: Accidental Complexity and Essential Complexity](https://en.wikipedia.org/wiki/No_Silver_Bullet)
+
+Example:
+
+- [Lean Software Development: Eliminate Waste](https://en.wikipedia.org/wiki/Lean_software_development#Eliminate_waste)
 
 ### Parkinson's Law
 
@@ -374,7 +440,7 @@ This law suggests that groups will give far more time and attention to trivial o
 
 The common fictional example used is that of a committee approving plans for nuclear power plant, who spend the majority of their time discussing the structure of the bike shed, rather than the far more important design for the power plant itself. It can be difficult to give valuable input on discussions about very large, complex topics without a high degree of subject matter expertise or preparation. However, people want to be seen to be contributing valuable input. Hence a tendency to focus too much time on small details, which can be reasoned about easily, but are not necessarily of particular importance.
 
-The fictional example above led to the usage of the term 'Bike Shedding' as an expression for wasting time on trivial details.
+The fictional example above led to the usage of the term 'Bike Shedding' as an expression for wasting time on trivial details. An alternative term is 'Yak Shaving'.
 
 ### The Unix Philosophy
 
@@ -490,6 +556,13 @@ See Also:
 Often applied in server application development, this principle states that what you send to others should be as minimal and conformant as possible, but you should be aim to allow non-conformant input if it can be processed.
 
 The goal of this principle is to build systems which are robust, as they can handle poorly formed input if the intent can still be understood. However, there are potentially security implications of accepting malformed input, particularly if the processing of such input is not well tested.
+
+Allowing non-conformant input, in time, may undermine the ability of protocols to evolve as implementors will eventually rely on this liberality to build their features.
+
+See Also:
+
+- [Hyrum's Law](#hyrums-law-the-law-of-implicit-interfaces)
+
 
 ### SOLID
 
@@ -622,9 +695,9 @@ See also:
 
 ### YAGNI
 
-[YAGNI on Wikipedia](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it)
+[YAGNI on Wikipedia](https://en.wikipedia.org/wiki/You_ain%27t_gonna_need_it)
 
-This is an acronym for _**Y**ou **A**ren't **G**onna **N**eed **I**t_.
+This is an acronym for _**Y**ou **A**in't **G**onna **N**eed **I**t_.
 
 > Always implement things when you actually need them, never when you just foresee that you need them.
 >
@@ -640,7 +713,7 @@ See also:
 
 ### The Fallacies of Distributed Computing
 
-[The Fallacies of Distributed Computing on Wikipedia](https://en.wikipedia.org/wiki/You_aren%https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing)
+[The Fallacies of Distributed Computing on Wikipedia](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing)
 
 Also known as _Fallacies of Networked Computing_, the Fallacies are a list of conjectures (or beliefs) about distributed computing, which can lead to failures in software development. The assumptions are:
 
@@ -672,8 +745,14 @@ If you have found these concepts interesting, you may enjoy the following books.
 - [Extreme Programming Installed - Ron Jeffries, Ann Anderson, Chet Hendrikson](https://www.goodreads.com/en/book/show/67834) - Covers the core principles of Extreme Programming.
 - [The Mythical Man Month - Frederick P. Brooks Jr.](https://www.goodreads.com/book/show/13629.The_Mythical_Man_Month) - A classic volume on software engineering. [Brooks' Law](#brooks-law) is a central theme of the book.
 - [Gödel, Escher, Bach: An Eternal Golden Braid - Douglas R. Hofstadter.](https://www.goodreads.com/book/show/24113.G_del_Escher_Bach) - This book is difficult to classify. [Hofstadter's Law](#hofstadters-law) is from the book.
-- [The Dilbert Principle - Adam Scott](https://www.goodreads.com/book/show/85574.The_Dilbert_Principle) - A comic look at corporate America, from the author who created the [Dilbert Principle](#the-dilbert-principl).
+- [The Dilbert Principle - Scott Adams](https://www.goodreads.com/book/show/85574.The_Dilbert_Principle) - A comic look at corporate America, from the author who created the [Dilbert Principle](#the-dilbert-principle).
 - [The Peter Principle - Lawrence J. Peter](https://www.goodreads.com/book/show/890728.The_Peter_Principle) - Another comic look at the challenges of larger organisations and people management, the source of [The Peter Principle](#the-peter-principle).
+
+## Contributing
+
+Please do contribute! [Raise an issue](https://github.com/dwmkerr/hacker-laws/issues/new) if you'd like to suggest an addition or change, or [Open a pull request](https://github.com/dwmkerr/hacker-laws/compare) to propose your own changes.
+
+Please be sure to read the [Contributing Guidelines](./.github/contributing.md) for requirements on text, style and so on. Please be aware of the [Code of Conduct](./.github/CODE_OF_CONDUCT.md) when engaging in discussions on the project.
 
 ## TODO
 
